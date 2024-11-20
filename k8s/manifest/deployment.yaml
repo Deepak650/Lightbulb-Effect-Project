@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: lbecontainer
-          image: qcgcontainer.azurecr.io/qrcodegenerator:latest
+          image:  lbecontainer.azurecr.io/deepaklightbulbeffectproject:latest
           ports:  # Correct indentation here
-            - containerPort: 80
+            - containerPort: 8080
