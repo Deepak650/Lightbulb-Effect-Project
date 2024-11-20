@@ -1,85 +1,75 @@
-/* Base styles */
+/* Reset and basic styling */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
 }
 
-body, html {
-    height: 100%;
-    background: linear-gradient(135deg, #f4c7ff, #bb99ff);
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #A8D0B6, #FFE156); /* Light nature tones */
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #333;
     text-align: center;
-    color: #fff;
 }
 
 .container {
-    position: relative;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.6);
+    background: #fff;
     border-radius: 15px;
-    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    max-width: 400px;
+    width: 100%;
+    border: 2px solid #A8D0B6; /* Light green border */
+    background-image: url('https://www.transparenttextures.com/patterns/diagonal-stripes.png');
 }
 
 .title {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 20px;
-    color: #ffeb3b;
+    color: #2F4F4F; /* Darker green */
 }
 
 .subtitle {
     font-size: 1.2rem;
-    margin-bottom: 40px;
-    color: #e1e1e1;
+    color: #6B8E23; /* Olive green */
+    margin-bottom: 30px;
 }
 
-#bulb {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background: #444;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-}
-
-/* Lightbulb on/off effect */
 .bulb-off {
-    background: #444;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    background-image: url('https://www.iconarchive.com/download/i10854/google/noto-emoji-animals-nature/22215-light-bulb.ico');
+    background-size: cover;
+    width: 120px;
+    height: 180px;
+    margin: 0 auto;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .bulb-on {
-    background: #ffeb3b;
-    box-shadow: 0 0 30px rgba(255, 255, 0, 0.8);
+    background-color: #ffcc00;
+    width: 120px;
+    height: 180px;
+    margin: 0 auto;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(255, 204, 0, 0.5);
 }
 
-/* Footer */
 .footer {
-    position: absolute;
-    bottom: 10px;
     font-size: 0.9rem;
-    color: #bbb;
+    color: #555;
+    margin-top: 30px;
+    font-style: italic;
 }
 
-.footer p {
-    margin-top: 10px;
+/* Hover Effects for Nature Vibe */
+.bulb-off:hover {
+    transform: scale(1.05);
 }
 
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-    .container {
-        width: 90%;
-    }
-
-    .title {
-        font-size: 2rem;
-    }
-
-    .subtitle {
-        font-size: 1rem;
-    }
+.bulb-on:hover {
+    transform: scale(1.05);
 }

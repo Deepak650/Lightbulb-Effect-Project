@@ -1,4 +1,3 @@
-// JavaScript to toggle the lightbulb on and off
 const bulb = document.getElementById('bulb');
 
 bulb.addEventListener('click', () => {
