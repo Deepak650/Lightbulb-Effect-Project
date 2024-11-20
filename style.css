@@ -1,21 +1,85 @@
-.canvas{
-    width: 600px;
-    height: 500px;
-    margin: 50px auto;
-    text-align: center;
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
-.bulb-off{
-    width: 265px;
-    height: 400px;
-    background: url('lightoff.png') no-repeat;
-    margin: auto;
+body, html {
+    height: 100%;
+    background: linear-gradient(135deg, #f4c7ff, #bb99ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
 }
 
-.bulb-on{
-    width: 265px;
-    height: 400px;
-    background: url('lighton.png') no-repeat;;
-    margin: auto;
+.container {
+    position: relative;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffeb3b;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #e1e1e1;
+}
+
+#bulb {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: #444;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Lightbulb on/off effect */
+.bulb-off {
+    background: #444;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.bulb-on {
+    background: #ffeb3b;
+    box-shadow: 0 0 30px rgba(255, 255, 0, 0.8);
+}
+
+/* Footer */
+.footer {
+    position: absolute;
+    bottom: 10px;
+    font-size: 0.9rem;
+    color: #bbb;
+}
+
+.footer p {
+    margin-top: 10px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
 }

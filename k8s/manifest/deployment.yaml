@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lbeapp
+  labels:
+    app: lbeapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: lbeapp
+  template:
+    metadata:
+      labels:
+        app: lbeapp
+    spec:
+      containers:
+        - name: lbecontainer
+          image: qcgcontainer.azurecr.io/qrcodegenerator:latest
+          ports:  # Correct indentation here
+            - containerPort: 80
